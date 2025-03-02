@@ -1,0 +1,68 @@
+<script setup lang="ts">
+const activeIndex = ref('1')
+</script>
+
+<template>
+  <client-only>
+    <div class="nav__container">
+      <el-menu
+          :default-active="activeIndex"
+          class="nav__menu"
+          mode="horizontal"
+          :ellipsis="false"
+      >
+        <div class="nav__menu__icon">
+          <el-menu-item index="0">
+            <img
+                class="nav__menu__icon__img"
+                style="width: 100px"
+                src="https://linnwarme.com/wp-content/uploads/2024/11/Pastel-Fondant-floral-3.webp"
+                alt="Element logo"
+            />
+          </el-menu-item>
+        </div>
+        <div class="nav__menu__items">
+          <el-menu-item class="nav__menu__items__text" index="1">Главная</el-menu-item>
+          <el-menu-item class="nav__menu__items__text" index="2">Обо мне</el-menu-item>
+          <el-menu-item class="nav__menu__items__text" index="3">Контакты</el-menu-item>
+        </div>
+      </el-menu>
+
+    </div>
+  </client-only>
+</template>
+
+<style scoped lang="scss">
+//* {
+//  border: 1px red solid !important;
+//}
+
+.nav__container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.nav__menu {
+  padding: 0 10rem;
+  width: 100%;
+  justify-content: space-between;
+
+  &__icon {
+    display: flex;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+
+    &__text {
+      font-size: 1.2rem;
+      border-radius: 20rem;
+      font-family: 'Comic Sans MS', serif;
+    }
+  }
+}
+
+</style>
