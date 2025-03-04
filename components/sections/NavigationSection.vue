@@ -15,8 +15,8 @@ const activeIndex = ref('1')
           <el-menu-item index="0">
             <img
                 class="nav__menu__icon__img"
-                style="width: 100px"
-                src="https://linnwarme.com/wp-content/uploads/2024/11/Pastel-Fondant-floral-3.webp"
+                style="width: 150px"
+                src="/img/logo.jpg"
                 alt="Element logo"
             />
           </el-menu-item>
@@ -37,6 +37,25 @@ const activeIndex = ref('1')
 //  border: 1px red solid !important;
 //}
 
+
+:deep(.el-menu-item.is-active) {
+  color: #e6b880 !important;
+  background-color: rgb(230, 218, 200) !important;
+  border-radius: 40px;
+  font-weight: bold;
+}
+
+:deep(.el-menu-item:hover) {
+  color: #e6b880 !important;
+  background-color: rgba(230, 218, 200) !important;
+}
+
+
+.el-menu--horizontal {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
 .nav__container {
   display: flex;
   width: 100%;
@@ -48,6 +67,7 @@ const activeIndex = ref('1')
   padding: 0 10rem;
   width: 100%;
   justify-content: space-between;
+  background: transparent;
 
   &__icon {
     display: flex;
@@ -60,7 +80,7 @@ const activeIndex = ref('1')
     &__text {
       font-size: 1.2rem;
       border-radius: 20rem;
-      font-family: 'Comic Sans MS', serif;
+      font-family: 'UrbanistUrbanist', serif;
     }
   }
 }

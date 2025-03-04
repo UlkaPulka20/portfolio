@@ -25,6 +25,7 @@ const groupedImages = computed(() => {
   </client-only>
 </template>
 
+
 <style scoped lang="scss">
 //* {
 //  border: 1px red solid !important;
