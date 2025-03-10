@@ -1,7 +1,7 @@
 FROM node:16.15.0-slim
 
 COPY /.output /nuxt/.output
-COPY ./config /nuxt/config
+COPY ./configs /nuxt/configs
 
 RUN mkdir -p /nuxt/.output/server/content/projects
 RUN mkdir -p /nuxt/.output/server/content/donate

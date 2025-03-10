@@ -50,7 +50,7 @@ build:
     paths:
       - .nuxt/
       - .output/
-      - config/
+      - configs/
     expire_in: 1 hour
 
 deploy:
