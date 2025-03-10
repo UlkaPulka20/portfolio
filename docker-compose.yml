@@ -1,7 +1,9 @@
 services:
   front:
     build: .
-    container_name: portfolio
-    image: portfolio:latest
+    container_name: ulkapulka-portfolio
+    image: ulkapulka-portfolio:latest
     restart: always
     network_mode: "host"
+    environment:
+      - NUXT_PORT=3015

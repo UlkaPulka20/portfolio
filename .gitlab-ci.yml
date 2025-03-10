@@ -62,5 +62,6 @@ deploy:
     - build
   before_script:
     - echo "Deploying..."
+    - export NUXT_PORT="3015"
   script:
     - docker compose up --detach --build
