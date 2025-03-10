@@ -1,9 +1,8 @@
 services:
-  front:
+  ulkapulka-portfolio:
     build: .
-    container_name: ulkapulka-portfolio
-    image: ulkapulka-portfolio:latest
+    container_name: ulkapulka
+    image: ulkapulka:latest
     restart: always
-    network_mode: "host"
-    environment:
-      - NUXT_PORT=3015
+    ports:
+      - "3015:3000"
