@@ -7,8 +7,6 @@ useHead({
 })
 </script>
 
-
-
 <template>
   <section>
     <HeroSection/>
