@@ -1,5 +1,19 @@
 <script setup lang="ts">
 const activeIndex = ref('1')
+
+const getPage = (key: string) => {
+  switch (key) {
+    case '1': return '/';
+    case '2': return '/about';
+    case '3': return '/contacts';
+    default: return '/';
+  }
+}
+
+const goToPage = async (key: string, keyPath: string[]) => {
+
+  await navigateTo(getPage(key))
+}
 </script>
 
 <template>
@@ -10,6 +24,7 @@ const activeIndex = ref('1')
           class="nav__menu"
           mode="horizontal"
           :ellipsis="false"
+          @select="goToPage"
       >
         <div class="nav__menu__icon">
           <el-menu-item index="0">
@@ -39,7 +54,7 @@ const activeIndex = ref('1')
 
 
 :deep(.el-menu-item.is-active) {
-  color: #e6b880 !important;
+  color: #ef8605 !important;
   background-color: rgb(230, 218, 200) !important;
   border-radius: 40px;
   font-weight: bold;

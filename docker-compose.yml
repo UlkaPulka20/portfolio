@@ -1,0 +1,7 @@
+services:
+  front:
+    build: .
+    container_name: portfolio
+    image: portfolio:latest
+    restart: always
+    network_mode: "host"
