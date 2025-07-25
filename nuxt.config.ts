@@ -18,6 +18,10 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/x-icon', href: 'https://linnwarme.com/wp-content/uploads/2024/11/Pastel-Fondant-floral-3.webp' }]
     }
   },
+  devServer: {
+    port: 3000,
+    host: '0.0.0.0'
+  },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   css: ['~/assets/scss/global.scss'],

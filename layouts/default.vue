@@ -27,8 +27,7 @@ import NavigationSection from "~/components/sections/NavigationSection.vue";
 .navigation {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 95vw;
+  width: 100vw;
   height: 12vh;
   padding-bottom: 4rem;
 }
