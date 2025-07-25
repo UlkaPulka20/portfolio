@@ -22,30 +22,15 @@ const goToPage = async (key: string, keyPath: string[]) => {
 <template>
   <client-only>
     <div class="nav__container">
-      <el-menu
-        :default-active="activeIndex"
-        class="nav__menu"
-        mode="horizontal"
-        :ellipsis="false"
-        @select="goToPage">
+      <el-menu :default-active="activeIndex" class="nav__menu" mode="horizontal" :ellipsis="false" @select="goToPage">
         <div class="nav__menu__items">
-          <el-menu-item class="nav__menu__items__text" index="1"
-            >Главная</el-menu-item
-          >
-          <el-menu-item class="nav__menu__items__text" index="2"
-            >Работы</el-menu-item
-          >
+          <el-menu-item class="nav__menu__items__text" index="1">Главная</el-menu-item>
+          <el-menu-item class="nav__menu__items__text" index="2">Работы</el-menu-item>
           <el-menu-item class="nav__menu__items__icon" index="1">
-            <nuxt-img
-              class="nav__menu__items__icon__img"
-              src="https://0af29f8f-sleaf.s3.twcstorage.ru/ulkapulka/potfolio/Home.jpg" />
+            <nuxt-img class="nav__menu__items__icon__img" src="https://0af29f8f-sleaf.s3.twcstorage.ru/ulkapulka/potfolio/Home.jpg" />
           </el-menu-item>
-          <el-menu-item class="nav__menu__items__text" index="3"
-            >Обо мне</el-menu-item
-          >
-          <el-menu-item class="nav__menu__items__text" index="4"
-            >Услуги</el-menu-item
-          >
+          <el-menu-item class="nav__menu__items__text" index="3">Обо мне</el-menu-item>
+          <el-menu-item class="nav__menu__items__text" index="4">Услуги</el-menu-item>
         </div>
       </el-menu>
     </div>
@@ -78,10 +63,13 @@ const goToPage = async (key: string, keyPath: string[]) => {
 
 .nav__container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   height: 8rem !important;
   width: 100% !important;
   position: fixed;
+  align-content: center;
+  justify-content: center;
   background-color: #fef2e2 !important;
   top: 0;
 
@@ -92,18 +80,15 @@ const goToPage = async (key: string, keyPath: string[]) => {
 }
 
 .nav__menu {
-  width: 88rem !important;
-  justify-content: space-between;
+  width: 67vw !important;
+  max-width: 67vw !important;
   background: transparent;
-  padding: 0 15rem;
   height: 6rem !important;
-
-  @media screen and (max-width: $macbook) {
-    width: 100% !important;
-  }
 
   @media screen and (max-width: $tablet) {
     padding: 0;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   &__items {
@@ -112,6 +97,7 @@ const goToPage = async (key: string, keyPath: string[]) => {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px #ef8605 solid !important;
+
     @media screen and (max-width: $macbook) {
       width: 100%;
     }
@@ -142,7 +128,6 @@ const goToPage = async (key: string, keyPath: string[]) => {
       color: #e6b880 !important;
       font-size: 1.8rem;
       border-radius: 0rem;
-      font-family: 'UrbanistUrbanist', serif;
     }
   }
 }

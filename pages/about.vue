@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-
 //const profileImage = '/img/skai.jpg';
 </script>
 
@@ -15,21 +14,16 @@ import { ref } from 'vue';
       <!-- <div class="hero__image">
         <img :src="profileImage" alt="Profile Photo" />
        </div>-->
-     </section>
+    </section>
+  </div>
+</template>
 
+<style scoped>
+.portfolio {
+  text-align: center;
+  width: 100%;
 
-   </div>
- </template>
-
- <style scoped>
-
- .portfolio {
-   font-family: 'UrbanistUrbanist', sans-serif;
-   text-align: center;
-   color: #eab676 !important;
-   width: 100%;
-
-   /*.hero {
+  /*.hero {
      background: url('/img/skai.jpg') no-repeat center center/cover;
      color: white;
      padding: 5rem 2rem;
@@ -38,19 +32,16 @@ import { ref } from 'vue';
      align-items: center;
    }*/
 
-   .hero__content h1 {
-     font-size: 2.5rem;
-   }
+  .hero__content h1 {
+    font-size: 2.5rem;
+  }
 
-   .hero__image img {
-     width: 150px;
-     height: 150px;
-     border-radius: 50%;
-     margin-top: 1rem;
-     border: 4px solid white;
-   }
- }
-
-
-
- </style>
+  .hero__image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 1rem;
+    border: 4px solid white;
+  }
+}
+</style>

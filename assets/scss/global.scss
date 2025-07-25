@@ -1,7 +1,63 @@
+@use 'screens' as *;
+
+html {
+  overflow: scroll;
+}
+
+h1 {
+  color: #e6b880 !important;
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+h2 {
+  color: #e6b880 !important;
+  font-size: 2.1rem;
+  margin: 0;
+}
+
+h3 {
+  color: #e6b880 !important;
+  font-size: 2rem;
+  margin: 0;
+}
+
+h4 {
+  color: #e6b880 !important;
+  font-size: 1.9rem;
+  margin: 0;
+}
+
+h5 {
+  color: #e6b880 !important;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+h6 {
+  color: #e6b880 !important;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+p,
+q {
+  color: #e6b880 !important;
+  font-size: 1rem;
+  margin: 0;
+}
+
+label {
+  font-size: 1rem;
+  color: #6a6f7e !important;
+  margin: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'UrbanistUrbanist', serif !important;
   background: #fef2e2;
 }

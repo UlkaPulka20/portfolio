@@ -1,43 +1,14 @@
 <script setup lang="ts">
 import imagesConfig from '~/configs/images.config';
-
-const columns = ref(3);
-const groupedImages = computed(() => {
-  const rows = [];
-  for (let i = 0; i < imagesConfig.length; i += columns.value) {
-    rows.push(imagesConfig.slice(i, i + columns.value));
-  }
-  return rows;
-});
 </script>
 
 <template>
   <client-only>
     <div class="container">
       <div class="container__row">
-        <div
-          class="container__row"
-          v-for="(row, rowIndex) in groupedImages"
-          :key="rowIndex">
-          <div class="container__row__column__text">
-            Привет!
-
-            <p>Я Улька Пулька ;)</p>
-            Тут будет скоро интересное, xe-xe)
-          </div>
-
-          <div class="container">
-            <div
-              class="container__row"
-              v-for="(image, colIndex) in row"
-              :key="colIndex">
-              <NuxtImg
-                class="container__row__column__image"
-                :src="image"
-                loading="lazy"
-                placeholder />
-            </div>
-          </div>
+        <h4 class="container__text">{{ 'Привет! \n Я Улька Пулька ;) \n Тут будет скоро интересное, xe-xe)' }}</h4>
+        <div class="container__image">
+          <NuxtImg class="container__image__img" :src="imagesConfig.home" loading="lazy" placeholder />
         </div>
       </div>
     </div>
@@ -45,15 +16,16 @@ const groupedImages = computed(() => {
 </template>
 
 <style scoped lang="scss">
-//* {
-//  border: 1px red solid !important;
-//}
+// * {
+//   border: 1px red solid !important;
+// }
 
 .container {
   display: flex;
   flex-direction: column;
-  width: 95rem;
-  height: 95rem;
+  width: 67vw;
+  height: fit-content;
+  padding-bottom: 2rem;
 
   &__row {
     display: flex;
@@ -61,27 +33,22 @@ const groupedImages = computed(() => {
     width: 100%;
     height: 100%;
     background: transparent;
-    padding: 0 7rem;
+    gap: 1rem;
+  }
 
-    &__column {
-      display: contents;
-      flex-direction: row;
+  &__text {
+    width: 100%;
+    white-space: pre-line;
+  }
 
-      &__text {
-        color: #e6b880 !important;
-        font-size: 1.8rem;
-        border-radius: 1rem;
-        font-family: 'UrbanistUrbanist', serif;
-        min-height: fit-content;
-        min-width: fit-content;
-      }
+  &__image {
+    width: fit-content;
 
-      &__image {
-        width: fit-content;
-        height: fit-content;
-        border-radius: 0.5rem;
-        object-fit: cover;
-      }
+    &__img {
+      border-radius: 1rem;
+      width: fit-content;
+      height: fit-content;
+      object-fit: cover;
     }
   }
 }

@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-
 //const profileImage = '/img/skai.jpg';
 </script>
 
 <template>
-  <div class="portfolio">
+  <div class="container">
     <!-- Hero секция -->
     <section class="hero">
       <div class="hero__content">
@@ -19,29 +18,24 @@ import { ref } from 'vue';
        </div>-->
     </section>
 
-
     <section class="about">
-      <p>with interest for UX/UI design</p>
-      <p>
-        ️ I'm a python developer
-      </p>
+      <h5>with interest for UX/UI design</h5>
+      <h5>️ I'm a python developer</h5>
     </section>
-
 
     <section class="tech">
       <h2>TECH</h2>
-      <p>HTML • CSS • Python • Vue • Nuxt • C# • Docker</p>
+      <h5>HTML • CSS • Python • Vue • Nuxt • C# • Docker</h5>
     </section>
   </div>
 </template>
 
 <style scoped>
-
-.portfolio {
-  font-family: 'UrbanistUrbanist', sans-serif;
+.container {
   text-align: center;
   color: #eab676 !important;
   width: 100%;
+  height: fit-content;
 
   /*.hero {
     background: url('/img/skai.jpg') no-repeat center center/cover;
@@ -51,10 +45,6 @@ import { ref } from 'vue';
     flex-direction: column;
     align-items: center;
   }*/
-
-  .hero__content h1 {
-    font-size: 2.5rem;
-  }
 
   .hero__image img {
     width: 150px;
@@ -68,21 +58,10 @@ import { ref } from 'vue';
 .about {
   background-color: #f5ebe0;
   padding: 2rem;
-  font-size: 2.2rem;
 }
 
 .tech {
   background-color: rgba(199, 210, 254, 0.18);
   padding: 2rem;
-}
-
-.tech h2 {
-  font-size: 1.5rem;
-  color: #e6b880 !important;
-}
-
-.tech p {
-  font-size: 1.5rem;
-  color: #e6b880 !important;
 }
 </style>

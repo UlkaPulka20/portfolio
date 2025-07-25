@@ -1,18 +1,17 @@
 <script setup lang="ts">
-import NavigationSection from "~/components/sections/NavigationSection.vue";
+import NavigationSection from '~/components/sections/NavigationSection.vue';
 </script>
 
 <template>
   <div class="container">
     <div class="navigation">
-      <NavigationSection/>
+      <NavigationSection />
     </div>
-    <slot/>
+    <slot />
   </div>
 </template>
 
 <style scoped>
-
 .container {
   display: flex;
   flex-direction: column;
@@ -31,5 +30,4 @@ import NavigationSection from "~/components/sections/NavigationSection.vue";
   height: 12vh;
   padding-bottom: 4rem;
 }
-
 </style>
